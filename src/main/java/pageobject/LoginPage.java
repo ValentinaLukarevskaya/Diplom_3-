@@ -1,4 +1,4 @@
-package com.valya.pageobject;
+package pageobject;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;

@@ -1,12 +1,12 @@
-package com.valya.pageobject;
+package pageobject;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import config.ConfigSingle;
+import config.EndPoints;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static com.valya.config.ConfigSingle.config;
-import static com.valya.config.EndPoints.REGISTER;
 
 public class RegistrationPage {
 
@@ -20,7 +20,7 @@ public class RegistrationPage {
 
     @Step("Открыть страницу регистрации")
     public RegistrationPage openRegistrationPage() {
-        Selenide.open(config.getBaseUriProperties() + REGISTER);
+        Selenide.open(ConfigSingle.config.getBaseUriProperties() + EndPoints.REGISTER);
 
         return this;
     }

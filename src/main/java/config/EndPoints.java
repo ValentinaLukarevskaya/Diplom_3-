@@ -1,4 +1,4 @@
-package com.valya.config;
+package config;
 
 public class EndPoints {
     public static final String AUTH = "/auth";

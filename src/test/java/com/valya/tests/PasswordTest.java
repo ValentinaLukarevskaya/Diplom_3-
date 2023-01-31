@@ -1,6 +1,5 @@
 package com.valya.tests;
 
-import com.codeborne.selenide.Condition;
 import com.valya.utils.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
@@ -9,8 +8,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import static com.valya.pageobject.RegistrationPage.*;
 
 @DisplayName("Тестирование некорректного пароля")
 @RunWith(Parameterized.class)

@@ -1,4 +1,4 @@
-package com.valya.config;
+package config;
 
 import org.aeonbits.owner.ConfigFactory;
 

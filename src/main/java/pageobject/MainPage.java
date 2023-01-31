@@ -1,12 +1,12 @@
-package com.valya.pageobject;
+package pageobject;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+import config.ConfigSingle;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
-import static com.valya.config.ConfigSingle.config;
 
 public class MainPage {
     private SelenideElement
@@ -24,7 +24,7 @@ public class MainPage {
 
     @Step("Открыть главную страницу")
     public MainPage openMainPage() {
-        Selenide.open(config.getBaseUriProperties());
+        Selenide.open(ConfigSingle.config.getBaseUriProperties());
 
         return this;
     }

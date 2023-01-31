@@ -1,11 +1,11 @@
-package com.valya.specifications;
+package specifications;
 
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 
-import static com.valya.config.ConfigSingle.config;
+import static config.ConfigSingle.config;
 
 public class Specifications {
 

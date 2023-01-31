@@ -1,12 +1,12 @@
-package com.valya.steps;
+package steps;
 
-import com.valya.api.models.User;
+import api.models.User;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 
-import static com.valya.config.EndPoints.*;
-import static com.valya.specifications.Specifications.requestSpecification;
+import static config.EndPoints.*;
+import static specifications.Specifications.requestSpecification;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 

@@ -1,10 +1,10 @@
 package com.valya.utils;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.valya.api.generatingdata.GeneratingDataOfUser;
-import com.valya.api.models.User;
-import com.valya.pageobject.*;
-import com.valya.steps.UserSteps;
+import api.generatingdata.GeneratingDataOfUser;
+import api.models.User;
+import pageobject.*;
+import steps.UserSteps;
 import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
@@ -23,7 +23,7 @@ public class BaseTest {
 
     @Before
     @Description("Конфигурация перед началом выполнения теста")
-    public void setUp() throws InterruptedException {
+    public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         user = GeneratingDataOfUser.createNewUser();
@@ -32,12 +32,11 @@ public class BaseTest {
 
     @After
     @Description("Конфигурация после окончания теста")
-    public void deleteDataOfUser() throws InterruptedException {
+    public void deleteDataOfUser() {
         if (response.extract().body().path("success").equals(true)) {
             accessToken = UserSteps.getAccessToken(response);
             user.setAccessToken(accessToken);
             UserSteps.deleteUser(user);
         }
-        Thread.sleep(2000);
     }
 }

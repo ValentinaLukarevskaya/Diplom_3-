@@ -1,7 +1,7 @@
 package com.valya.tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.valya.api.generatingdata.GeneratingDataOfUser;
+import api.generatingdata.GeneratingDataOfUser;
 import com.valya.utils.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
@@ -12,8 +12,8 @@ import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static com.valya.config.ConfigSingle.config;
-import static com.valya.config.EndPoints.LOGIN;
+import static config.ConfigSingle.config;
+import static config.EndPoints.LOGIN;
 
 @DisplayName("Регистрация")
 public class RegistrationTest extends BaseTest {
@@ -21,7 +21,7 @@ public class RegistrationTest extends BaseTest {
     @Override
     @Before
     @Description("Конфигурация перед началом выполнения теста")
-    public void setUp() throws InterruptedException {
+    public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         user = GeneratingDataOfUser.createNewUser();

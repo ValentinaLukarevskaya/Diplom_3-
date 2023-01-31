@@ -6,8 +6,8 @@ import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static com.valya.config.ConfigSingle.config;
-import static com.valya.config.EndPoints.USER_ACCOUNT_PAGE;
+import static config.ConfigSingle.config;
+import static config.EndPoints.USER_ACCOUNT_PAGE;
 
 @DisplayName("Переход по клику на «Личный кабинет»/Переход из личного кабинета в конструктор/Выход из аккаунта")
 public class PersonalAccountTest extends BaseTest {
